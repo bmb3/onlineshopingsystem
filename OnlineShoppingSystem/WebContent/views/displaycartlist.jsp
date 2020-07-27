@@ -15,10 +15,22 @@
 <body bgcolor="#DDDDDD">
 <center>
    <h2 style="background-color:aqua;"style="font-size:30px;"> CART LIST</h2>
-    <table>
+    <table border="1">
+             <thead>
+             <tr>
+                 <th>ProductName</th>
+                  <th>ProductNumber</th>
+                  <th>ProductCost</th>
+                   <th>ProductQuantity</th>
+                   <th>ProductDiscount</th>
+                   <th>PayBillOption</th>
+             </tr>
+             </thead>
+    
 			<c:forEach var="Product" items="${list }">
 				     <form action="PayBill">
-				                   
+				     
+				                   <tbody>
 				                    <tr>
 				                    <td>
 				                    <h1><input type="hidden" name="productname" value="${Product.getProductname()}">${Product.getProductname()}</h1>
@@ -39,7 +51,7 @@
 									<input type="submit" name="btn" value="PayBill">
 									</td>
 									</tr>
-									
+							</tbody>
 									
 						</form>
 							

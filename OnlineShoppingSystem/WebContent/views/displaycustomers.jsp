@@ -14,9 +14,19 @@
 </head>
 <body bgcolor="#DDDDDD">
 <center>
+<table border="1">
+   <thead>
+       <tr>
+           <th>CustomerId</th>
+            <th>CustomerName</th>
+            <th>CustomerPassword</th>
+            <th>CustomerBalnace</th>
+       
+       </tr>
+   </thead>
    <h2 style="background-color:aqua;"style="font-size:30px;">CUSTOMERS LIST</h2>
 			<c:forEach var="Customer" items="${list }">
-						<table>
+						<tbody>
 							<tr>
 								<td>
 									<h5><c:out value="${Customer.getCustomerid()}"></c:out></h5>
@@ -31,8 +41,9 @@
 									<h5><c:out value="${Customer.getBalance()}"></c:out></h5>
 								</td>	
 							</tr>
-						</table>
+						</tbody>
 	     </c:forEach>
+	     </table>
 	</center>			
 	
 		

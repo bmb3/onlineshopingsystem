@@ -14,9 +14,20 @@
 </head>
 <body bgcolor="#DDDDDD">
 <center>
+<table border="1">
+      <thead>
+         <tr>
+            <th>ProductNumber</th>
+            <th>ProductName</th>
+           <th>ProductCost</th>
+             <th>ProductQuantity</th>
+             <th>ProductDiscount</th>
+         </tr>
+      </thead>
+      
    <h2 style="background-color:aqua;"style="font-size:30px;">PRODUCTS LIST</h2>
 			<c:forEach var="Product" items="${list }">
-						<table>
+						<tbody>
 							<tr>
 								<td>
 									<h5><c:out value="${Product.getProductno()}"></c:out></h5>
@@ -34,8 +45,9 @@
 									<h5><c:out value="${Product.getDiscount()}"></c:out></h5>
 								</td>	
 							</tr>
-						</table>
+						</tbody>
 	     </c:forEach>
+</table>
 	</center>			
 	
 		
